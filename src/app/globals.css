@@ -2,4 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    * {
+    padding: 0%;
+    margin: 0%; }
 
+    html {
+        height: 220%; }
+
+
+
+    /* Fundo Linear utilizado em Cadastro + Login */
+    #lin_grad {
+        height: 100vh;  
+        background-image: linear-gradient(rgb(252, 207, 207), rgb(255, 230, 230), rgb(255, 255, 255)); 
+    } 
+} 

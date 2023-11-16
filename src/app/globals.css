@@ -10,11 +10,19 @@
     html {
         height: 220%; }
 
+    /* Produzindo estilização do cabeçalho */
+    .cabecalho-links {
 
+        text-decoration: none;
+        color: black; 
+        transition: color 0.5s;
+    } .cabecalho-links:hover {
+        color: #A2A9AF; 
+    }
 
-    /* Fundo Linear utilizado em Cadastro + Login */
+    /* Fundo Linear utilizado em Cadastro + Login 
     #lin_grad {
         height: 100vh;  
         background-image: linear-gradient(rgb(252, 207, 207), rgb(255, 230, 230), rgb(255, 255, 255)); 
-    } 
+    } */
 } 

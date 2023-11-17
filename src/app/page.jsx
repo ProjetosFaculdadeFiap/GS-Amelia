@@ -166,7 +166,7 @@ export default function Home() {
                     </div> 
 
                     <div className='px-20'> 
-                      <a href='#'> 
+                      <a href='https://www.hapvida.com.br/site/vendas/saude'> 
                         <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
                       </a>
                     </div> 
@@ -182,7 +182,7 @@ export default function Home() {
                     </div> 
 
                     <div className='px-20'> 
-                      <a href='#'> 
+                      <a href='https://www.hapvida.com.br/site/vendas/odonto'> 
                         <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
                       </a>
                     </div> 
@@ -196,7 +196,7 @@ export default function Home() {
                     <p className='text-sm m-2 text-center'> Conte com uma rede de cobertura <br /> completa, preços que cabem no seu <br />  bolso e o melhor: você monta o plano <br /> que é ideal para o seu momento. </p>  
 
                     <div className='px-20'> 
-                      <a href='#'> 
+                      <a href='https://contrate-online.hapvida.com.br/'> 
                         <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
                       </a>
                     </div> 

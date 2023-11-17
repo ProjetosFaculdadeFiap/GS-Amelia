@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer base {
     * {
-    padding: 0%;
-    margin: 0%; }
+        padding: 0%;
+        margin: 0%; }
+    
+        html {
+            height: 220%; }
+}
 
-    html {
-        height: 220%; }
+@layer components {
 
     /* Produzindo estilização do cabeçalho */
     .cabecalho-links {
@@ -17,12 +20,13 @@
         color: black; 
         transition: color 0.5s;
     } .cabecalho-links:hover {
-        color: #A2A9AF; 
+        color: #FFB0AE;  } 
+    
+    .cabecalho-botao {
+        margin: 5px;
+        border-radius: 0.5rem;       
+        border-width: 0px;
+        color: #ffff;
     }
-
-    /* Fundo Linear utilizado em Cadastro + Login 
-    #lin_grad {
-        height: 100vh;  
-        background-image: linear-gradient(rgb(252, 207, 207), rgb(255, 230, 230), rgb(255, 255, 255)); 
-    } */
 } 
+

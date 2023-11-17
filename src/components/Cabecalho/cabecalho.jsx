@@ -12,19 +12,18 @@ export default function Cabecalho() {
                     height={0} /> 
 
                 <nav>
-                    <Link className="absolute w-2 left-[710px] text-[20px]  whitespace-nowrap cabecalho-links" href="/"> sobre nós </Link>
-                    <Link className="absolute w-2 left-[850px] text-[20px]  whitespace-nowrap cabecalho-links" href="/"> home </Link>
-                    <Link className="absolute w-2 left-[960px] text-[20px]  whitespace-nowrap cabecalho-links" href="/"> projeto </Link>
-                    <Link className="absolute w-2 left-[1080px] text-[20px] whitespace-nowrap cabecalho-links" href="/"> serviços </Link>
+                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/"> sobre nós </Link>
+                    <Link className="px-10 text-[20px]  whitespace-nowrap cabecalho-links" href="/"> projeto </Link>
+                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/"> hapvida </Link>
+                    <Link className="text-[20px]  whitespace-nowrap cabecalho-links" href="/"> home </Link>
                 </nav>
 
                 <div>
-                    <a href="/users-info/login"> 
-                    <Image className="m-10 w-[55px]" src="/img/login.png"
-                    alt="login png"
-                    width={30}
-                    height={0} /> 
-                    </a> 
+                    <a className="px-5" href="/users-info/login"> Login </a>
+                    <a href="/users-info/cadastro"> 
+                        <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Inscreva-se </button>
+                    </a>  
+                        
                 </div> 
                 </div> 
             </header>

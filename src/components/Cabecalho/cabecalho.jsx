@@ -12,8 +12,8 @@ export default function Cabecalho() {
                     height={0} /> 
 
                 <nav>
-                    <Link className="px-14 text-[20px]  whitespace-nowrap cabecalho-links" href="/"> sobre nós </Link>
-                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/"> projeto </Link>
+                    <Link className="px-14 text-[20px]  whitespace-nowrap cabecalho-links" href="/criadores/sobre-nos"> sobre nós </Link>
+                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/criadores/projeto"> projeto </Link>
                     <Link className="px-10 text-[20px]  whitespace-nowrap cabecalho-links" href="/hapvida"> hapvida </Link>
                     <Link className="px-20 text-[20px] whitespace-nowrap cabecalho-links" href="/"> home </Link>
                 </nav>

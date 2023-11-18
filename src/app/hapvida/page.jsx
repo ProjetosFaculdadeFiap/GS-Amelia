@@ -1,4 +1,5 @@
 import Image from "next/image";
+import './hapvida.css'
 
 export default function Hapvida() {
     return (
@@ -12,17 +13,19 @@ export default function Hapvida() {
                 beneficiários 271 centros de diagnóstico por imagem e coleta laboratorial, dos quais cerca de 100 operações fazem parte do Laboratório NotreLabs, uma rede nacional com capacidade de processar 4,5 milhões de análises clínicas e 500 mil exames de imagens por mês. </p> 
             </div>
 
-            <div> 
-                <h1 className="px-20 text-lg font-bold"> Nossa Missão: </h1>
-                <p className="px-20 text-base mb-4"> Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros. </p>
+            <div className="conteudo-missao"> 
+                <h1 className="text-lg font-bold"> Nossa Missão: </h1>
+                <h1 className="text-lg font-bold"> Nossa Visão: </h1>
             </div>
-            <div>
-                <h1 className="px-20 text-lg font-bold"> Nossa Visão: </h1>
-                <p className="px-20 text-base mb-4"> Ser reconhecida pela qualidade assistencial e geração de valor para todo o ecossistema da saúde. </p> 
+            <div className="conteudo-missao-proposta">   
+                <p className="text-base mb-4"> Proporcionar saúde integrada de qualidade, acessível <br /> a geração de brasileiros. </p>
+                <p className="text-base mb-4"> Ser reconhecida pela qualidade assistencial e <br /> geração de valor para todo o ecossistema da saúde. </p> 
             </div> 
-            <div> 
+            <div className="conteudo-valores"> 
                 <h1 className="px-20 text-lg font-bold"> Nossos Valores: </h1>
-                <ul className="px-20"> 
+            </div>
+            <div className="conteudo-valores"> 
+            <ul className="px-20"> 
                     <li className="item">Acolhimento</li>
                     <li className="item">Comprometimento</li>
                     <li className="item">Ética e combate à corrupção</li>
@@ -31,7 +34,7 @@ export default function Hapvida() {
                     <li className="item">Responsabilidade social</li>
                     <li className="item">Sustentabilidade</li>
                     <li className="item">Eficiência em custo</li>
-                </ul>
+            </ul>
             </div>
 
 

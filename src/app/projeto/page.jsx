@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Projeto() {
     return (
         <> 
-            <h1 className="px-10 text-2xl mb-2"> Apresentando Projeto M&M: </h1>
+            <h1 className="px-10 text-2xl mb-2"> Projeto <a class="text-red-300"> Amélia </a>:</h1>
                 <p className='px-10 text-base mb-1'> Nosso projeto consiste na criação de um robô, a robô Amélia, que seria uma grande aliada a área de saúde.</p> 
                 <p className='px-10 text-base mb-4'> Pensamos em três áreas pilares importantes, que de algum modo hoje em dia não são tão valorizadas. Nossos pilares são ‘Lar de Idosos’ ‘Escolas’ e por fim ‘Hospitais’ </p>
 

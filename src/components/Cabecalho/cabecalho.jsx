@@ -12,15 +12,14 @@ export default function Cabecalho() {
                     height={0} /> 
 
                 <nav>
-                    <Link className="px-14 text-[20px]  whitespace-nowrap cabecalho-links" href="/criadores/sobre-nos"> sobre nós </Link>
-                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/criadores/projeto"> projeto </Link>
+                    <Link className="px-14 text-[20px]  whitespace-nowrap cabecalho-links" href="/projeto"> projeto </Link>
+                    <Link className="px-20 text-[20px]  whitespace-nowrap cabecalho-links" href="/hapvida/info"> home </Link>
                     <Link className="px-10 text-[20px]  whitespace-nowrap cabecalho-links" href="/hapvida"> hapvida </Link>
-                    <Link className="px-20 text-[20px] whitespace-nowrap cabecalho-links" href="/"> home </Link>
                 </nav>
 
                 <div>
-                    <a href="/users-info/registro"> 
-                        <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Inscreva-se </button>
+                    <a href="/formulario">
+                        <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Formulário </button>
                     </a>  
                         
                 </div> 

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <> 
       <div> 
-        <h1 className="text-2xl text-center mb-4"> Seja Bem-Vindo(a) à <a class="text-red-300"> HAPVIDA </a> NOTREDAME INTERMÉDICA</h1>
+        <h1 className="introducao"> Seja Bem-Vindo(a) à <a class="text-red-300"> HAPVIDA </a> NOTREDAME INTERMÉDICA</h1>
           <p className="text-center mb-4"> RN Saúde agora é Hapvida NotreDame Intermédica e você pode contar com mais saúde de qualidade mais perto de você, com uma das maiores <br />  empresas verticalizadas do mundo e o maior Grupo de saúde do país. </p> 
           <p className="text-center mb-14"> Buscamos sempre proporcionar melhor experiência por meio de um atendimento acolhedor e com uma assistência médica de qualidade  em nossos hospitais, clínicas, <br />  pronto atendimentos, centros de medicina preventiva, centros de diagnóstico por imagem e coleta laboratorial. </p> 
         </div> 
@@ -153,7 +153,7 @@ export default function Home() {
           <p className='px-20'> Para você iniciar e poder ter acesso as nossas bases de consultas é necessário fazer seu formulário médico para começarmos a trabalhar! </p>
           
             <div className="px-20 mb-8">
-              <a href='/formulario'> 
+              <a href='/prontuario'> 
                 <button className='home-botao px-3 m-4 p-2'> Registro </button>
               </a>
             </div>

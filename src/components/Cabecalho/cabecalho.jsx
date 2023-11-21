@@ -18,8 +18,8 @@ export default function Cabecalho() {
                 </nav>
 
                 <div>
-                    <a href="/formulario">
-                        <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Formulário </button>
+                    <a href="/prontuario">
+                        <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Prontuário </button>
                     </a>  
                         
                 </div> 

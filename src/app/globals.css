@@ -15,12 +15,27 @@
     .introducao {
         @apply text-2xl px-10 mb-4
     }
+
+
+    /* Estilização Prontuário */
     .btn-agenda {
-        @apply border-2 rounded-md m-2 bg-pink-200 border-pink-200 px-3
+        @apply border-2 rounded-md m-2 bg-pink-200 border-pink-200 px-3 mb-12
     } .btn-agenda:hover {
         @apply border-pink-400
     }
     
+    .prontuario {
+        @apply px-5 text-base mb-6
+    } 
+    .prontuario-estilo {
+        @apply w-[300px] bg-neutral-300 rounded-[5px] mb-6
+    }
+    .prontuario-separacao {
+        @apply flex justify-start 
+    }
+    .prontuario-resposta {
+        @apply w-[200px] bg-neutral-300 rounded-[5px] mb-4
+    }
 
 
 

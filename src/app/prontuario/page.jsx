@@ -1,4 +1,4 @@
-export default function Formulario() {
+export default function Prontuario() {
     return (
         <> 
             

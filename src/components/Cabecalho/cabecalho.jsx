@@ -19,7 +19,7 @@ export default function Cabecalho() {
                 </nav>
 
                 <div>
-                    <a href="/users-info/cadastro"> 
+                    <a href="/users-info/registro"> 
                         <button className="cabecalho-botao px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Inscreva-se </button>
                     </a>  
                         

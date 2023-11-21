@@ -12,6 +12,20 @@
 }
 
 @layer components {
+    .introducao {
+        @apply text-2xl px-10 mb-4
+    }
+    .btn-agenda {
+        @apply border-2 rounded-md m-2 bg-pink-200 border-pink-200 px-3
+    } .btn-agenda:hover {
+        @apply border-pink-400
+    }
+    
+
+
+
+
+
 
     /* Produzindo estilização do cabeçalho */
     .cabecalho-links {

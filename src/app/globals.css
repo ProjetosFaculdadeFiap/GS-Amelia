@@ -63,22 +63,12 @@
         @apply w-[200px] bg-neutral-300 rounded-[5px] mb-4
     }
 
-
-
-
-    /* Produzindo estilização do cabeçalho */
+    /* Estilização Cabeçalho */
     .cabecalho-links {
-        text-decoration: none;
-        color: black; 
-        transition: color 0.5s;
-    } .cabecalho-links:hover {
-        color: #FFB0AE;  } 
-    
-    .cabecalho-botao {
-        margin: 5px;
-        border-radius: 0.5rem;       
-        border-width: 0px;
-        color: #ffff;
+        @apply px-10 text-[20px] whitespace-nowrap rounded-md m-2 px-3 mb-12 transition-colors duration-300
+    }
+    .cabecalho-links:hover {
+        @apply text-red-300
     }
     .home-botao {
         border-radius: 0.375rem;

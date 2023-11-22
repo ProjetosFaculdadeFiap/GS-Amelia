@@ -5,8 +5,8 @@ export default function Home() {
     <> 
       <div> 
         <h1 className="introducao"> Seja Bem-Vindo(a) à <a class="text-red-300"> HAPVIDA </a> NOTREDAME INTERMÉDICA</h1>
-          <p className="text-center mb-4"> RN Saúde agora é Hapvida NotreDame Intermédica e você pode contar com mais saúde de qualidade mais perto de você, com uma das maiores <br />  empresas verticalizadas do mundo e o maior Grupo de saúde do país. </p> 
-          <p className="text-center mb-14"> Buscamos sempre proporcionar melhor experiência por meio de um atendimento acolhedor e com uma assistência médica de qualidade  em nossos hospitais, clínicas, <br />  pronto atendimentos, centros de medicina preventiva, centros de diagnóstico por imagem e coleta laboratorial. </p> 
+          <p className="introducao-informacao mb-4"> RN Saúde agora é Hapvida NotreDame Intermédica e você pode contar com mais saúde de qualidade mais perto de você, com uma das maiores empresas verticalizadas do mundo e o maior Grupo de saúde do país. </p> 
+          <p className="introducao-informacao mb-14"> Buscamos sempre proporcionar melhor experiência por meio de um atendimento acolhedor e com uma assistência médica de qualidade  em nossos hospitais, clínicas, pronto atendimentos, centros de medicina preventiva, centros de diagnóstico por imagem e coleta laboratorial. </p> 
         </div> 
 
         <div> 
@@ -139,29 +139,29 @@ export default function Home() {
             </div> 
         </div> 
 
-        <div> <h3 className="px-20 text-lg font-bold mb-2"> Como posso acessar os canais digitais? </h3>
+        <div> <h3 className="acesso"> Como posso acessar os canais digitais? </h3>
           <p className='px-20'> Para ter acesso aos canais e serviços digitais de medicina e odontologia, você precisa realizar o cadastro e criar sua senha. </p>
           
             <div className="px-20 mb-8">
               <a href='https://www.hapvida.com.br/site/noticias/baixe-agora-nosso-app-e-tenha-o-hapvida-ao-alcance-do-seu-celular'> 
-                <button className='home-botao px-3 m-4 p-2'> Cadastre Já </button>
+                <button className='canal-botao'> Cadastre Já </button>
               </a>
             </div>
             </div>  
 
-            <div> <h3 className="px-20 text-lg font-bold mb-2"> Quero marcar uma consulta!</h3>
+            <div> <h3 className="acesso"> Quero marcar uma consulta!</h3>
           <p className='px-20'> Para você iniciar e poder ter acesso as nossas bases de consultas é necessário fazer seu formulário médico para começarmos a trabalhar! </p>
           
             <div className="px-20 mb-8">
               <a href='/prontuario'> 
-                <button className='home-botao px-3 m-4 p-2'> Registro </button>
+                <button className='canal-botao'> Registro </button>
               </a>
             </div>
             </div>  
   
 
         <div className='card'> 
-          <h1 className='card-pai text-center text-2xl m-5 p-5 '> Ainda não possui plano?  </h1>
+          <h1 className='card-pai'> Ainda não possui plano?  </h1>
         </div> 
             <p className='text-center text-lg'> Venha para o Hapvida e conte com os cuidados exclusivos do Sistema de Saúde que mais cresce no Brasil. </p> 
           

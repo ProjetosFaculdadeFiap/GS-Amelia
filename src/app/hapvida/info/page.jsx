@@ -153,7 +153,7 @@ export default function Home() {
           <p className='px-20'> Para você iniciar e poder ter acesso as nossas bases de consultas é necessário fazer seu formulário médico para começarmos a trabalhar! </p>
           
             <div className="px-20 mb-8">
-              <a href='/prontuario'> 
+              <a href='/formularios/agenda/consulta'> 
                 <button className='canal-botao'> Registro </button>
               </a>
             </div>

@@ -36,12 +36,7 @@ export default function Consulta() {
                             </div>
 
                             <div> 
-                                <label className="formulario"> Em qual especialidade você gostaria de passar? </label>
-                                <input className="formulario-resposta" type="text" required/>
-                            </div>
-
-                            <div> 
-                                <label className="formulario"> Em qual médico você gostaria de passar? </label>
+                                <label className="formulario"> Em qual especialista você gostaria de passar? </label>
                                 <input className="formulario-resposta" type="text" required/>
                             </div>
 

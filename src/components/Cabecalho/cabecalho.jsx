@@ -16,10 +16,11 @@ export default function Cabecalho() {
                     <Link className="cabecalho-links" href="/hapvida/info"> home </Link>
                     <Link className="cabecalho-links" href="/hapvida/sobrehap"> hapvida </Link>
                     <Link className="cabecalho-links" href="/jornal"> jornal </Link>
+                    <Link className="cabecalho-links" href="/formularios/resultados"> resultados </Link>
                 </nav>
 
                 <div>
-                    <a href="/prontuario">
+                    <a href="/formularios/prontuario">
                         <button className="rounded-md px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Prontuário </button>
                     </a>  
                         

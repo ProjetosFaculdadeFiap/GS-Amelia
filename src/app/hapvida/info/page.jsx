@@ -177,7 +177,7 @@ export default function Home() {
 
                     <div className='px-20'> 
                       <a href='https://www.hapvida.com.br/site/vendas/saude'> 
-                        <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
+                        <button className='plano-botao'> Faça seu plano </button>
                       </a>
                     </div> 
               </div> 
@@ -193,7 +193,7 @@ export default function Home() {
 
                     <div className='px-20'> 
                       <a href='https://www.hapvida.com.br/site/vendas/odonto'> 
-                        <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
+                        <button className='plano-botao'> Faça seu plano </button>
                       </a>
                     </div> 
                     <p className='text-xs text-center m-1'> No caso de dúvidas, ligue 0800 284 9131 </p> 
@@ -207,7 +207,7 @@ export default function Home() {
 
                     <div className='px-20'> 
                       <a href='https://contrate-online.hapvida.com.br/'> 
-                        <button className='plano-botao px-3 m-5 p-2'> Faça seu plano </button>
+                        <button className='plano-botao'> Faça seu plano </button>
                       </a>
                     </div> 
               </div> 

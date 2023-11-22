@@ -5,8 +5,8 @@ export default function Prontuario() {
         <> 
             <div> 
                 <h1 className="introducao"> Olá seja-bem vindo a parte de prontuário! </h1>
-                <p className="text-base px-10"> Aqui é possivel acessar os canais de <strong> Agendanto Exame </strong> e <strong> Agendamento Consulta </strong>. Mas antes fique a vontade para responder esse formulário médico! </p>
-                <p className="text-base px-10 mb-10"> É de extrema importância que você faça ele, para que todas as suas informações fiquem  armazenadas em nosso banco de dados. </p> 
+                <p className="introducao-informacao"> Aqui é possivel acessar os canais de <strong> Agendanto Exame </strong> e <strong> Agendamento Consulta </strong>. Mas antes fique a vontade para responder esse formulário médico! </p>
+                <p className="introducao-informacao mb-10"> É de extrema importância que você faça ele, para que todas as suas informações fiquem  armazenadas em nosso banco de dados. </p> 
             </div> 
 
             <div className="flex justify-around"> 
@@ -14,15 +14,15 @@ export default function Prontuario() {
                 <h2 className="text-1xl font-bold"> Deseja fazer um agendamento de consulta? </h2>        
             </div> 
                 <div className="flex justify-around"> 
-                    <a href='/prontuario/agenda-exame'> 
+                    <a href='/agenda/exame'> 
                         <button className='btn-agenda'> Agende seu exame já!</button>
                     </a>
-                    <a href='/prontuario/agenda-consulta'> 
+                    <a href='/agenda/consulta'> 
                         <button className='btn-agenda'> Agende sua consulta já!</button>
                     </a>
                 </div>
 
-            <div className="border-black border"> 
+            <div className="border-2 border-2 border-black"> 
                 <div className="px-5 p-2 text-4xl">Prontuário Médico:</div>
                 <div className="px-5 text-xl mb-10">Seja bem-vindo(a)! Para uma melhor experiência vamos precisar de algumas informações!</div>
 
@@ -204,6 +204,11 @@ export default function Prontuario() {
                             <input className="prontuario-resposta" type="number" required /> 
                     </div>
                 </form>
+
+                <div> 
+                    <p className="px-3"> Se houve termino do prontuário, clique aqui em baixo para registrar suas informações </p>
+                    <input className='cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ... rounded-md m-2 bg-pink-200 px-3 mb-12' type="submit" value="Registro Feito"/>
+                </div>
             </div> 
             
             <div className='flex justify-center m-10'> 

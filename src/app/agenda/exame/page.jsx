@@ -47,9 +47,6 @@ export default function Exame() {
                         </form>
                     </div>
             </div>
-
-
-
         </>
     )
 }

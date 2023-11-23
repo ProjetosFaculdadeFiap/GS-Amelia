@@ -53,7 +53,7 @@
         @apply flex justify-center
     }
     .card-pai {
-        @apply rounded-md bg-pink-200 text-center text-2xl m-5 p-5 
+        @apply rounded-md bg-red-100 text-center text-2xl m-5 p-5 
     }
     .card-filho{
         @apply border-2 rounded-sm border-black m-5 p-5 
@@ -83,12 +83,12 @@
 
     /* Estilização em botões */ 
     .plano-botao {
-        @apply bg-pink-200 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 
+        @apply bg-red-200 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 
     }
     .canal-botao {
-        @apply px-3 m-4 p-2 rounded-md bg-pink-200
+        @apply px-3 m-4 p-2 rounded-md bg-red-200
     } .canal-botao:hover {
-        @apply bg-pink-300
+        @apply bg-red-300
     }
     .agendamento {
         @apply text-base font-bold

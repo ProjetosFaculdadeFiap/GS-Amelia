@@ -46,12 +46,6 @@ export default function Jornal() {
                         Então brincamos com isso fazendo a sigla M&M. 
                     </p>
 
-
-
-
-
-
-
                 <h1 className="introducao font-bold"> Participantes </h1>
 
 
@@ -61,9 +55,3 @@ export default function Jornal() {
     )
 }
 
-//  <div className="px-10"> 
-// <Image src="/img/amelia.png"
-//alt="amelia imagem"
-//width={200}
-//height={0} />
-//</div>

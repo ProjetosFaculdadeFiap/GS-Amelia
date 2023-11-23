@@ -13,7 +13,7 @@ export default function Cabecalho() {
 
                 <nav>
                     <Link className="cabecalho-links" href="/jornal"> Amelía News </Link>
-                    <Link className="cabecalho-links" href="/hapvida/info"> Início </Link>
+                    <Link className="cabecalho-links" href="/"> Início </Link>
                     <Link className="cabecalho-links" href="/hapvida/sobrehap"> Hapvida </Link>
                     <Link className="cabecalho-links" href="/formularios/resultados"> Exames </Link>
                 </nav>

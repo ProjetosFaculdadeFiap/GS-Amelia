@@ -39,6 +39,7 @@
     } .login:hover {
         @apply text-red-300
     }
+    /* Estilização Cadastro + Login */
 
 
     .card-info {
@@ -57,6 +58,7 @@
     .card-filho{
         @apply border-2 rounded-sm border-black m-5 p-5 
     }
+    /* Estilização Cadastro + Login */
 
     /* Estilização Prontuário */
     .btn-agenda {
@@ -76,6 +78,8 @@
     .prontuario-resposta {
         @apply w-[200px] bg-neutral-300 rounded-[5px] mb-4
     }
+    /* Estilização Prontuário */
+
 
     /* Estilização em botões */ 
     .plano-botao {
@@ -89,6 +93,8 @@
     .agendamento {
         @apply text-base font-bold
     }
+    /* Estilização em botões */ 
+
 
     /* Estilização Agenda Exame + Consulta */
     .cardzao {
@@ -106,6 +112,7 @@
     .formulario-resposta {
         @apply w-[200px] bg-neutral-300 rounded-[5px] mb-4
     }
+    /* Estilização Agenda Exame + Consulta */
 
     /* Estilização Cabeçalho */
     .cabecalho-links {

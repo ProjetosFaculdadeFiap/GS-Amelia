@@ -28,15 +28,34 @@
         @apply mb-2 text-base 
     }
 
+    /* Estilização Cadastro + Login */
+    .registro-card {
+        @apply w-96 flex flex-col
+    } .registro-card-resposta {
+        @apply bg-red-300 text-white py-3 px-6 rounded-md mt-6 mb-2 hover:bg-red-400 transition duration-500 ease-out
+    }
+    .login {
+        @apply  m-2 px-3 transition-colors duration-300
+    } .login:hover {
+        @apply text-red-300
+    }
+
+
+    .card-info {
+        @apply text-base mb-4 
+    } .preencher {
+        @apply w-[300px] bg-pink-100 rounded-[5px] 
+    }
+
     /* Estilização de Planos */
     .card {
         @apply flex justify-center
     }
     .card-pai {
-        @apply rounded-md bg-red-300 text-center text-2xl m-5 p-5 
+        @apply rounded-md bg-pink-200 text-center text-2xl m-5 p-5 
     }
     .card-filho{
-        @apply border-2 rounded-sm border-black m-5 p-5
+        @apply border-2 rounded-sm border-black m-5 p-5 
     }
 
     /* Estilização Prontuário */
@@ -60,12 +79,12 @@
 
     /* Estilização em botões */ 
     .plano-botao {
-        @apply bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 
+        @apply bg-pink-200 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 
     }
     .canal-botao {
-        @apply px-3 m-4 p-2 rounded-md bg-red-300
+        @apply px-3 m-4 p-2 rounded-md bg-pink-200
     } .canal-botao:hover {
-        @apply bg-pink-200
+        @apply bg-pink-300
     }
     .agendamento {
         @apply text-base font-bold

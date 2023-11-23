@@ -78,8 +78,7 @@ export default function Prontuario() {
                     </form>
 
                     <div> 
-                        <p className="px-3"> Se houve termino do prontuário, clique aqui em baixo para registrar suas informações </p>
-                        <input className='cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ... rounded-md m-2 bg-pink-200 px-3 mb-12' type="submit" value="Termino Prontuário"/>
+                        <input className='cursor-pointer bg-pink-200 text-black py-3 px-6 rounded-md mt-6 mb-2 hover:bg-pink-400 transition duration-500 ease-out' type="submit" value="Termino Prontuário"/>
                     </div>
                 </div>
 
@@ -202,8 +201,7 @@ export default function Prontuario() {
                         </div>
 
                         <div> 
-                            <p className="p-5"> Se houve termino no histórico médico, clique aqui em baixo para registrar suas informações </p>
-                            <input className='cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ... rounded-md m-2 bg-pink-200 px-3 mb-12' type="submit" value="Termino Prontuário"/>
+                            <input className='cursor-pointer bg-pink-200 text-black py-3 px-6 rounded-md mt-6 mb-2 hover:bg-pink-400 transition duration-500 ease-out' type="submit" value="Termino Prontuário"/>
                         </div>
                     </form>
                 </div>

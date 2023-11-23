@@ -35,12 +35,12 @@ export default function Jornal() {
                 <h1 className="introducao font-bold"> Curiosidades </h1>    
                     <p className="introducao-informacao"> Nossa robô amelía tem um nome por trâs. Se chamada assim: </p>
                         <p className="border-2 rounded-sm border-pink-200 m-5 p-5">
-                            <li> A ssistente </li> 
+                            <li> A ssistência </li> 
                             <li> M édica </li> 
-                            <li> E  </li> 
-                            <li> L  </li> 
-                            <li> I  </li> 
-                            <li> A  </li> 
+                            <li> E special</li> 
+                            <li> L ligada à </li> 
+                            <li> I  nteligência</li> 
+                            <li> A  rtificial</li> 
                         </p> 
                     <p className="introducao-informacao mb-6"> Por que nossa empresa se chama M&M? Bom isso é uma boa pergunta, já que ela é um trocadilho sobre nosso grupo aonde somos compostos por quatro meninas e um menino. 
                         Então brincamos com isso fazendo a sigla M&M. 

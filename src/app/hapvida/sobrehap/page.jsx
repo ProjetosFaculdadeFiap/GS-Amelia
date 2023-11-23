@@ -2,7 +2,7 @@ export default function SobreHapvida() {
     return (
         <> 
             <div>
-                <h1 className="introducao"> Conheça mais sobre  <a class="text-red-300"> HAPVIDA </a> NOTREDAME INTERMÉDICA</h1>
+                <h1 className="introducao"> Conheça mais sobre  <a class="text-pink-300"> HAPVIDA </a> NOTREDAME INTERMÉDICA</h1>
                 <p className="introducao-informacao mb-4"> A Hapvida NotreDame Intermédica é, hoje, a maior operadora de saúde do Brasil, com mais 16,1 milhões de beneficiários de saúde e odontologia. Fruto da fusão entre o Hapvida, que começou suas operações em 1979 com a inauguração do Hospital Antonio Prudente, e a NotreDame Intermédica, fundada em 
                 1968 e pioneira em Medicina Preventiva no País, oferece saúde integral e odontologia para Clientes empresariais e individuais em todas as regiões: Norte, Nordeste, Centro-Oeste, Sudeste e Sul. </p> 
 

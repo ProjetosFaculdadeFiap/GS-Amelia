@@ -77,8 +77,8 @@ export default function Cadastro() {
                                 Registrar 
                             </button>
                             <div className="login">
-                                <Link href="/usuarios/login"> Já possui cadastro?</Link>
-                            </div> 
+                                <Link href="/usuarios/login"> Já possui login? Clique aqui :)</Link>
+                            </div>  
                         </div>
                     </fieldset>
                 </form>

@@ -1,43 +1,90 @@
+"use client"; 
+import Link from "next/link";
+import { useState } from "react"
+
 export default function Cadastro() {
-  return (
-      <> 
-          <div className="wrapper login"> 
-              <div className="container">
+    const [nome, setNome] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    
+        const handleCadastro = async (e) => {
+        e.preventDefault();
+        const novoUsuario = {
+            nome,
+            cpf,
+            email,
+            senha,
+        };
+        const resposta = await fetch("", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(novoUsuario),
+        });
+        
+        if (resposta.ok) {
+            const dados = await resposta.json();
+            sessionStorage.setItem("usuario", JSON.stringify(dados));
+        } else {
+            console.error('Erro ao incluir seu cadastro, tente novamente mais tarde!:', resposta.status, resposta.statusText);
+        }}
 
-                  <div className="col-left"> 
-                      <div className="login-text">
-                          <h2> Bem-Vindo! </h2> 
-                          <p> Se cadastre, para adentrar <br/> em nosso site :) </p>
-                          <a href="#" className="btn"> Registrar-se </a>
-                      </div>
-                  </div>
+    return (
+        <> 
+            <section className="flex justify-center items-center h-screen">
+            <div className="mx-auto p-10 bg-red-200 rounded-lg shadow-md">
 
-                  <div className="col-right"> 
-                      <div className="login-form"> 
-                          <h2> Login de Usuários </h2>
-                          <form action=""> 
-                              <p> 
-                                  <label> Digite seu E-mail ou seu CPF: <span>*</span></label>
-                                  <input type="text" placeholder="E-mail ou CPF" required /> 
-                              </p>
+                <form onSubmit={handleCadastro} className="registro-card"> 
+                    <fieldset className="m-0 p-0 border-none"> 
+                    <legend className="text-lg font-bold mb-4">Registro de Usuários </legend> 
 
-                              <p> 
-                                  <label> Digite sua senha: <span>*</span></label>
-                                  <input type="password" placeholder="Senha" required/>                                
-                              </p>
-                              
-                              <p> 
-                                  <input type="submit" value="Entrar"/>
-                              </p>
-                              <p> 
-                                  <a href="#"> Esqueceu sua senha? </a>
-                              </p>
-                          </form>
-                      </div>
-                  </div>
+                        <div> 
+                            <label className="mb-2" htmlFor="idNome"> Digite seu nome completo: </label>
+                            <input className="p-3 my-4 border rounded-md w-full"
+                            type="text" name="nome" id="idNome" placeholder="Nome Completo:"        
+                            
+                            required onChange={(e) => setNome(e.target.value)} /> 
+                        </div>
 
-              </div>
-          </div>
-      </>
-  )
+                        <div className="mb-4"> 
+                        <div> 
+                            <label className="mb-2" htmlFor="idEmail"> Digite seu E-mail: </label>
+                            <input className="p-3 my-4 border rounded-md w-full"
+                            type="email" name="email" id="idEmail" placeholder="Email:"        
+                            
+                            required onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+                        </div>
+
+                        <div> 
+                            <label className="mb-2" htmlFor="idCpf"> Informe seu CPF: </label>
+                            <input className="p-3 my-4 border rounded-md w-full"
+                            type="text" name="cpf" id="idCpf" placeholder="CPF:"        
+                            
+                            required onChange={(e) => setCpf(e.target.value)} />
+                        </div>
+
+                        <div> 
+                            <label className="mb-2" htmlFor="idSenha"> Crie uma Senha: </label>
+                            <input className="p-3 my-4 border rounded-md w-full"
+                            type="password" name="senha" id="idSenha" placeholder="Senha:"        
+                            
+                            required onChange={(e) => setSenha(e.target.value)} />
+                        </div>
+
+                        <div className="flex flex-col items-center"> 
+                            <button className="registro-card-resposta">
+                                Registrar 
+                            </button>
+                            <div className="login">
+                                <Link href="/usuarios/login"> Já possui cadastro?</Link>
+                            </div> 
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            </section>
+        </>
+    )
 }
+

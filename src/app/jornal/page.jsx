@@ -11,8 +11,7 @@ export default function Jornal() {
             </div>
 
             <div> 
-                <p className="introducao-informacao mb-6"> Conhecendo um pouco da Amelía... Venha conhecer como nós produzimos à ideia, à organização, sobre os produtores do projeto, venha conheçer sobre :D</p>
-                <h1> Conhecendo sobre nossa história </h1>
+                <p className="introducao-informacao mb-6"> Conhecendo um pouco da <a class="text-red-300">Amelía</a>. Venha conhecer como nós produzimos à ideia, como tivemos a organização de cada matéria utilizada, sobre os produtores do projeto, e muito mais!</p>
             </div>
         </>
     )

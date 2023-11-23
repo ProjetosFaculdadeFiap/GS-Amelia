@@ -4,7 +4,7 @@ export default function Resultados() {
     return (
         <> 
             <div>
-                <h1 className="introducao"> Olá seja-bem vindo a parte de resultados! </h1>
+                <h1 className="introducao"> Resultados dos Exames </h1>
                 <p className="introducao-informacao mb-6"> Aqui é possivel acessar os resultados obtidos em seus exames!</p>
 
             <div className="flex justify-center"> 

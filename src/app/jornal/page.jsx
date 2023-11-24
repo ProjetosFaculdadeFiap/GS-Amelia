@@ -23,39 +23,56 @@ export default function Jornal() {
 
                             <p className="px-4">Venha conhecer sobre a empresa!!</p>
                             <p className="px-4"> Para a produção da Amelía nós separamos o que deveriamos fazer em cada matéria. Para que tudo se concilie e ocorra tudo bem!</p>
-                                <h5 className="px-10 mb-2"> Aqui abaixo está uma ideia de como ouve a organização: </h5>
+                                <h5 className="px-10 mb-4"> Aqui abaixo está uma ideia de como ouve a organização: </h5>
                                 <div className="flex justify-start"> 
-                                <Image src="/img/amelia-robo.png" 
-                                    alt="robo amelia"
-                                    width={200}
-                                    height={0} /> 
                                         <li className="px-10 mb-2"> <strong> AI & Chatbot </strong> </li>
                                         <li className="px-10 mb-2"> <strong> Building Relational Database </strong> - Base de dados com informações dos usuários dos robôs </li>
                                         <li className="px-10 mb-2"> <strong> Computational Thinking Using Python </strong> - Consulta às informações do usuário no banco </li>
                                         <li className="px-10 mb-2"> <strong> Domain Driven Design </strong> - CRUD no banco de dados pra retornar ao front end com informações do prontuário </li>
                                         <li className="px-10 mb-2"> <strong> Responsive Web Development </strong> - Prontuário virtual com requisições ao banco </li>
                                         <li className="px-10 mb-6"> <strong> Software Design & TX </strong> - Diagramas explicando nossa atuação no site, nosso robô gerando prontuários </li>
-                                </div> 
-                        </div>
+                                </div>
+                                        
+                            <p className="introducao-informacao"> Diferentes versões da nossa querida amelía :) </p>
+                            <p className="introducao-informacao"> Para nos o R2D2 de StarWars e Wall-E da Pixar foram grandes inspirações para chegarmos na Amelía. </p> 
+                            <p className="introducao-informacao"> Criamos três prototipos dela, sendo dois o visual dela de frente e de costas e o terceiro como ela carregaria. </p> 
+                            <div className="flex justify-start"> 
+                                <Image src="/img/robo-frente.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
 
-                <h1 className="introducao font-bold"> Curiosidades </h1>    
-                    <p className="introducao-informacao"> Nossa robô amelía tem um nome por trâs. Se chamada assim: </p>
-                        <p className="border-2 rounded-sm border-pink-200 m-5 p-5">
-                            <li> A ssistência </li> 
-                            <li> M édica </li> 
-                            <li> E special</li> 
-                            <li> L ligada à </li> 
-                            <li> I  nteligência</li> 
-                            <li> A  rtificial</li> 
-                        </p> 
+                                <Image src="/img/robo-costas.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
+
+                                <Image src="/img/robo.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
+                            </div>
+                            <p className="introducao-informacao font-bold"> Algumas curiosidades: </p>
+                            <p className="introducao-informacao"> Nossa robô amelía tem uma sigla por trâs de tudo, sendo ela: </p>
+                                <div className="px-10 mb-4"> 
+                                    <li> A ssistência </li> 
+                                    <li> M édica </li> 
+                                    <li> E special</li> 
+                                    <li> L ligada à </li> 
+                                    <li> I  nteligência</li> 
+                                    <li> A  rtificial</li> 
+                                </div> 
+
+                        
                     <p className="introducao-informacao mb-6"> Por que nossa empresa se chama M&M? Bom isso é uma boa pergunta, já que ela é um trocadilho sobre nosso grupo aonde somos compostos por quatro meninas e um menino. 
                         Então brincamos com isso fazendo a sigla M&M. 
                     </p>
 
                 <h1 className="introducao font-bold"> Participantes </h1>
 
-
+                <h1 className="introducao font-bold"> Feedback </h1>
             </div> 
+        </div> 
 
         </>
     )

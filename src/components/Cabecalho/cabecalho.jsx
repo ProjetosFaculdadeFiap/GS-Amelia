@@ -12,23 +12,26 @@ export default function Cabecalho() {
                     height={0} /> 
 
                 <nav>
+                        <a href="/formularios/historico">
+                            <button className="rounded-md px-3 m-2 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Histórico </button>
+                        </a>  
                     <Link className="cabecalho-links" href="/jornal"> Amelía News </Link>
                     <Link className="cabecalho-links" href="/"> Início </Link>
                     <Link className="cabecalho-links" href="/hapvida/sobrehap"> Hapvida </Link>
                     <Link className="cabecalho-links" href="/formularios/resultados"> Exames </Link>
+                        <a href="/formularios/prontuario">
+                            <button className="rounded-md px-3 m-2 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Prontuário </button>
+                        </a>  
                 </nav>
 
                 <div>
-                    <a href="/formularios/historico">
-                        <button className="rounded-md px-3 m-2 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Histórico </button>
-                    </a>  
-
-                    <a href="/formularios/prontuario">
-                        <button className="rounded-md px-3 m-5 transition ease-in-out delay-150 bg-red-300 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ..."> Prontuário </button>
-                    </a>  
-                        
+                    <a href="/usuarios/login">
+                            <button className="border-2 border-red-300 rounded-2xl text-red-300 shadow-sm p-1 px-3 m-5">
+                                Área Cliente
+                            </button>
+                    </a>
                 </div> 
-                </div> 
+                </div>
             </header>
         </> 
     )

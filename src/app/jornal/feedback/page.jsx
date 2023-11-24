@@ -37,7 +37,7 @@ export default function Feedback() {
             <section className="flex justify-center items-center h-screen">
             <div className="mx-auto p-10 bg-red-200 rounded-lg shadow-md">
 
-                <form className="registro-card"> 
+                <form onSubmit={handleSubmit} className="registro-card"> 
                     <fieldset className="m-0 p-0 border-none"> 
                     <legend className="text-lg font-bold mb-4">Bem vindo ao Feedback</legend> 
 

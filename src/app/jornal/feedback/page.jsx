@@ -1,7 +1,15 @@
+/* 
 "use client"; 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Feedback() {
+
+    useEffect(() => {
+        const token = sessionStorage.getItem("token");
+        if (!token) {
+        window.location.href = "/usuarios/login";
+    }
+    }, []);
 
     const [nome, setNome] = useState('');
     const [descricao, setDescricao] = useState('');
@@ -76,4 +84,4 @@ export default function Feedback() {
             </section>
         </>
     )
-}
+} */ 

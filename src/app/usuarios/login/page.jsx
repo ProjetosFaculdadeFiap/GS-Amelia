@@ -3,27 +3,51 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Login() {
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
+    const [usuario, setUsuario] = useState({
+        email: "",
+        cpf: "",
+        senha: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUsuario({ ...usuario, [name]: value });
+    };
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const usuario = {
-            email,
-            senha,
-        };
-        const resposta = await fetch("", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(usuario),
-            });
-        
-        if (resposta.ok) {
-            const dados = await resposta.json();
-            sessionStorage.setItem("token", dados.token);
+
+        console.log(usuario);
+
+        try {
+            const resposta = await fetch("http://localhost:8080/");
+
+            if (resposta.ok) {
+                const contentType = resposta.headers.get("content-type");
+
+                if (contentType && contentType.includes("application/json")) {
+                    const resultado = await resposta.json();
+                    const user = resultado.find(
+                        (ObjUsuario) =>
+                            (ObjUsuario.email === usuario.email || ObjUsuario.cpf === usuario.cpf) &&
+                            ObjUsuario.senha === usuario.senha
+                    );
+                    if(user){
+                        sessionStorage.setItem("token", resultado.token);
+                        window.location.href = '/';
+                    }else{
+                        alert("Usuário não encontrado");
+                    }
+                } else {
+                    console.log("JSON não suportado :(");
+                }
             } else {
-            console.error('Seu login deu erro! Você já se cadastrou?', resposta.status, resposta.statusText);
-            } }
+                console.log(`Erro no servidor: ${resposta.status}`);
+            }
+        } catch (error) {
+            console.log("Erro ao envio de dados!", error);
+        }
+    };
 
     return (
         <> 
@@ -38,17 +62,14 @@ export default function Login() {
                         <div> 
                             <label className="mb-2" htmlFor="idEmail"> Digite seu E-mail ou seu CPF: </label>
                             <input className="p-3 my-4 border rounded-md w-full"
-                            type="email" name="email" id="idEmail" placeholder="Email:"        
-                            
-                            required onChange={(e) => setEmail(e.target.value)} />
+                            type="email" name="email" id="idEmail" placeholder="Digite seu e-mail ou cpf" required onChange={handleChange} />
                         </div>
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idSenha"> Digite sua senha: </label>
                             <input className="p-3 my-4 border rounded-md w-full"
-                            type="password" name="senha" id="idSenha" placeholder="Senha:"        
-                            required onChange={(e) => setSenha(e.target.value)} />
+                            type="password" name="senha" id="idSenha" placeholder="Digite sua senha" required onChange={handleChange}/>
                         </div>
 
                         <div className="flex flex-col items-center"> 
@@ -56,7 +77,7 @@ export default function Login() {
                                 Entrar 
                             </button>
                             <div className="login">
-                                <Link href="/"> Não possui cadastro? Clique aqui :)</Link>
+                                <Link href="/usuarios/cadastro"> Não possui cadastro? Clique aqui :)</Link>
                             </div> 
                         </div>
                     </fieldset>

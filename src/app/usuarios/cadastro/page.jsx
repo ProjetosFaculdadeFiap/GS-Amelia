@@ -3,31 +3,41 @@ import Link from "next/link";
 import { useState } from "react"
 
 export default function Cadastro() {
-    const [nome, setNome] = useState("");
-    const [cpf, setCpf] = useState("");
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-    
-        const handleCadastro = async (e) => {
-        e.preventDefault();
-        const novoUsuario = {
-            nome,
-            cpf,
-            email,
-            senha,
-        };
-        const resposta = await fetch("", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(novoUsuario),
+    const [form, setForm] = useState({
+        nome: "",
+        email: "",
+        cpf: "",
+        senha: "",
         });
         
-        if (resposta.ok) {
+        const handleChange = (e) => {
+            setForm({
+            ...form,
+            [e.target.name]: e.target.value,
+            });
+        };
+        
+        const handleCadastro = async (e) => {
+            e.preventDefault();
+            try {
+            const resposta = await fetch("http://localhost:8080/", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify(form),
+            });
+        
+            if (!resposta.ok) {
+                throw new Error(`Erro ao cadastrar usuário: ${resposta.status} ${resposta.statusText}`);
+            }
+        
             const dados = await resposta.json();
-            sessionStorage.setItem("usuario", JSON.stringify(dados));
-        } else {
-            console.error('Erro ao incluir seu cadastro, tente novamente mais tarde!:', resposta.status, resposta.statusText);
-        }}
+            sessionStorage.setItem("token", dados.token);
+            } catch (error) {
+            console.error("Erro ao incluir seu cadastro, tente novamente mais tarde!:", error.message);
+            }
+        };    
 
     return (
         <> 

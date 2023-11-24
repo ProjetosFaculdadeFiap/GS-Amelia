@@ -7,13 +7,12 @@ export default function Cadastro() {
     const [email, setEmail] = useState(''); 
     const [cpf, setCpf] = useState(''); 
     const [senha, setSenha] = useState('');
-    const [data, setData] = useState('')
 
     const handleCadastro = async (e) => {
         e.preventDefault();
         try {
+
             const paciente = {
-                data_nascimento:data,
                 cpf: cpf,
                 nome: nome
             }
@@ -47,6 +46,7 @@ export default function Cadastro() {
 
             const dados = await resposta_usuario.json();
             sessionStorage.setItem("token", dados.token);
+            window.location.href = "/";
         } catch (error) {
             console.error("Erro ao incluir seu cadastro, tente novamente mais tarde!:", error.message);
         }
@@ -64,12 +64,6 @@ export default function Cadastro() {
                         <div> 
                             <label className="mb-2" htmlFor="idNome"> Digite seu nome completo: </label>
                             <input className="p-3 my-4 border rounded-md w-full" type="text" name="nome" required onChange={(e) => setNome(e.target.value)}/>       
-                            
-                        </div>
-
-                        <div> 
-                            <label className="mb-2" htmlFor="idNome"> Digite sua data de nascimento: </label>
-                            <input className="p-3 my-4 border rounded-md w-full" type="date" name="nome" required onChange={(e) => setData(e.target.value)}/>       
                             
                         </div>
 

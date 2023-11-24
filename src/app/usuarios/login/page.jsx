@@ -3,41 +3,37 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Login() {
-    const [usuario, setUsuario] = useState({
-        email: "",
-        cpf: "",
-        senha: "",
-    });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setUsuario({ ...usuario, [name]: value });
-    };
-
+    const [entrada, setEntrada] = useState('')
+    const [senha, setSenha] = useState('')
+    
     const handleLogin = async (e) => {
         e.preventDefault();
-
-        console.log(usuario);
-
+    
         try {
             const resposta = await fetch("http://localhost:8080/mm/usuario");
-
+    
             if (resposta.ok) {
                 const contentType = resposta.headers.get("content-type");
-
+    
                 if (contentType && contentType.includes("application/json")) {
                     const resultado = await resposta.json();
-                    const user = resultado.find(
-                        (ObjUsuario) =>
-                            (ObjUsuario.email === usuario.email || ObjUsuario.cpf === usuario.cpf) &&
-                            ObjUsuario.senha === usuario.senha
-                    );
-                    if(user){
-                        sessionStorage.setItem("token", resultado.token);
-                        window.location.href = '/';
-                    }else{
-                        alert("Usuário não encontrado");
+                    console.log(resultado)
+                    console.log(entrada, senha)
+    
+                    for(let i = 0; i < resultado.length; i ++) {
+                        
+                        if ((resultado[i].email == entrada || resultado[i].cpf == entrada)&&(resultado[i].senha == senha)){
+                            console.log("Você entrou")
+
+                            sessionStorage.setItem("user", {"id" : resultado[i].id})
+                            
+                            sessionStorage.setItem("token", resultado);
+                            window.location.href = "/";
+                        }
                     }
+    
+                    // Resto do código...
                 } else {
                     console.log("JSON não suportado :(");
                 }
@@ -62,14 +58,14 @@ export default function Login() {
                         <div> 
                             <label className="mb-2" htmlFor="idEmail"> Digite seu E-mail ou seu CPF: </label>
                             <input className="p-3 my-4 border rounded-md w-full"
-                            type="email" name="email" id="idEmail" placeholder="Digite seu e-mail ou cpf" required onChange={handleChange} />
+                            type="email" name="email" id="idEmail" placeholder="Digite seu e-mail ou cpf" required onChange={(e) => setEntrada(e.target.value)} />
                         </div>
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idSenha"> Digite sua senha: </label>
                             <input className="p-3 my-4 border rounded-md w-full"
-                            type="password" name="senha" id="idSenha" placeholder="Digite sua senha" required onChange={handleChange}/>
+                            type="password" name="senha" id="idSenha" placeholder="Digite sua senha" required onChange={(e) => setSenha(e.target.value)}/>
                         </div>
 
                         <div className="flex flex-col items-center"> 

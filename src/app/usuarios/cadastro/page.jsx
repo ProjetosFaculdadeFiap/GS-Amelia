@@ -11,31 +11,29 @@ export default function Cadastro() {
         });
         
         const handleChange = (e) => {
-            setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-            });
+            const { name, value } = e.target;
+            setForm(prevForm => ({ ...prevForm, [name]: value }));
         };
-        
+
         const handleCadastro = async (e) => {
             e.preventDefault();
             try {
-            const resposta = await fetch("http://localhost:8080/", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                },
-                body: JSON.stringify(form),
-            });
-        
-            if (!resposta.ok) {
-                throw new Error(`Erro ao cadastrar usuário: ${resposta.status} ${resposta.statusText}`);
-            }
-        
-            const dados = await resposta.json();
-            sessionStorage.setItem("token", dados.token);
+                const resposta = await fetch("http://localhost:8080/mm/paciente", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(form),
+                });
+
+                if (!resposta.ok) {
+                    throw new Error(`Erro ao cadastrar usuário: ${resposta.status} ${resposta.statusText}`);
+                }
+
+                const dados = await resposta.json();
+                sessionStorage.setItem("token", dados.token);
             } catch (error) {
-            console.error("Erro ao incluir seu cadastro, tente novamente mais tarde!:", error.message);
+                console.error("Erro ao incluir seu cadastro, tente novamente mais tarde!:", error.message);
             }
         };    
 
@@ -50,36 +48,26 @@ export default function Cadastro() {
 
                         <div> 
                             <label className="mb-2" htmlFor="idNome"> Digite seu nome completo: </label>
-                            <input className="p-3 my-4 border rounded-md w-full"
-                            type="text" name="nome" id="idNome" placeholder="Nome Completo:"        
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="nome" required value={form.nome} onChange={handleChange}/>       
                             
-                            required onChange={(e) => setNome(e.target.value)} /> 
                         </div>
 
                         <div className="mb-4"> 
                         <div> 
                             <label className="mb-2" htmlFor="idEmail"> Digite seu E-mail: </label>
-                            <input className="p-3 my-4 border rounded-md w-full"
-                            type="email" name="email" id="idEmail" placeholder="Email:"        
-                            
-                            required onChange={(e) => setEmail(e.target.value)} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="email" name="email" id="idEmail" placeholder="Email:" required onChange={handleChange} />
+                        
                         </div>
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idCpf"> Informe seu CPF: </label>
-                            <input className="p-3 my-4 border rounded-md w-full"
-                            type="text" name="cpf" id="idCpf" placeholder="CPF:"        
-                            
-                            required onChange={(e) => setCpf(e.target.value)} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="cpf" id="idCpf" placeholder="CPF:" required onChange={handleChange} />
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idSenha"> Crie uma Senha: </label>
-                            <input className="p-3 my-4 border rounded-md w-full"
-                            type="password" name="senha" id="idSenha" placeholder="Senha:"        
-                            
-                            required onChange={(e) => setSenha(e.target.value)} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="password" name="senha" id="idSenha" placeholder="Senha:" required onChange={handleChange} />
                         </div>
 
                         <div className="flex flex-col items-center"> 

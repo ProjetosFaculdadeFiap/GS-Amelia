@@ -20,7 +20,7 @@ export default function Login() {
         console.log(usuario);
 
         try {
-            const resposta = await fetch("http://localhost:8080/");
+            const resposta = await fetch("http://localhost:8080/mm/usuario");
 
             if (resposta.ok) {
                 const contentType = resposta.headers.get("content-type");

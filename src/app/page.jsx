@@ -8,7 +8,7 @@ export default function Home() {
     const token = sessionStorage.getItem("token");
     if (!token) {
       window.location.href = "/usuarios/login";
-   }
+    }
   }, []);
 
 
@@ -228,7 +228,7 @@ export default function Home() {
           <div className='flex justify-center m-10'> 
             <a className='px-2' href='#'> 
             <Image 
-              src="/img/faceb'ook.png"
+              src="/img/facebook.png"
               alt="logo facebook"
               width={35}
               height={55}  />

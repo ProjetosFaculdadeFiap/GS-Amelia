@@ -13,15 +13,16 @@ export default function Exame() {
 
     const [dia, setDia] = useState('');
     const [horario, setHorario] = useState('');
+    const [exame, setExame] = useState(''); 
     const [laboratorio, setLaboratorio] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const resposta = await fetch("http://localhost:8080/", {
+        const resposta = await fetch("http://localhost:8080/mm/exames", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dia, horario, laboratorio),
+            body: JSON.stringify(dia, horario, exame, laboratorio),
         });
         if (resposta.ok) {
             console.log("Agendamento realizado com sucesso :D");
@@ -67,6 +68,11 @@ export default function Exame() {
                                 <input className="m-4 mb-4" type="checkbox"  value={horario} onChange={(e) => setHorario(e.target.value)} />
                                 <span>NOITE</span>
                         </div>
+
+                            <div>
+                                <label className="formulario">Qual exame irá realizar?</label>
+                                <input className="formulario-resposta" type="text" required value={exame} onChange={(e) => setExame(e.target.value)} />
+                            </div>
 
                             <div>
                                 <label className="formulario">Em qual laboratório você gostaria de passar?</label>

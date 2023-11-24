@@ -18,8 +18,8 @@ export default function Historico() {
         alergia:"", 
         antibiotico:"", 
         medicamento:"", 
-        doencaPresente:"", 
-        doencaCoracao:"", 
+        doenca:"", 
+        cardio:"", 
         fumante:"",
         diabete:"", 
         cicatrizacao:"", 
@@ -33,7 +33,7 @@ export default function Historico() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const resposta = await fetch("http://localhost:8080/", {
+        const resposta = await fetch("http://localhost:8080/mm/historico", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form),
@@ -113,11 +113,11 @@ export default function Historico() {
                     </div>
 
                     <div> 
-                        <label className="prontuario" htmlFor="medicamentos"> Faz uso de medicamentos? </label>
-                            <input className="m-4" type="checkbox"  value={form.medicamentos} onChange={handleChange} />
+                        <label className="prontuario" htmlFor="medicamento"> Faz uso de medicamentos? </label>
+                            <input className="m-4" type="checkbox"  value={form.medicamento} onChange={handleChange} />
                             <span>NÃO</span>
 
-                            <input className="m-4" type="checkbox"  value={form.medicamentos} onChange={handleChange}/>
+                            <input className="m-4" type="checkbox"  value={form.medicamento} onChange={handleChange}/>
                             <span>SIM</span>
                             <label className="prontuario">Se sim, quais? </label>
                             <input className="prontuario-resposta" type="text"  /> 
@@ -125,18 +125,18 @@ export default function Historico() {
 
                     <div> 
                         <label className="prontuario" htmlFor="doencaPresente"> Possui alguma doenças presente? </label>
-                            <input className="m-4" type="checkbox"  value={form.doencaPresente} onChange={handleChange}  />
+                            <input className="m-4" type="checkbox"  value={form.doenca} onChange={handleChange}  />
                             <span>NÃO</span>
 
-                            <input className="m-4" type="checkbox" value={form.doencaPresente} onChange={handleChange}/>
+                            <input className="m-4" type="checkbox" value={form.doenca} onChange={handleChange}/>
                             <span>SIM</span>
                             <label className="prontuario">Se sim, quais? </label>
                             <input className="prontuario-resposta" type="text"  /> 
                     </div>
                     
                     <div> 
-                        <label className="prontuario" htmlFor="doencaCoracao"> Possui alguma doenças no coração? </label>
-                            <input className="m-4" type="checkbox"  value={form.doencaCoracao} onChange={handleChange} />
+                        <label className="prontuario" htmlFor="cardio"> Possui alguma doenças no coração? </label>
+                            <input className="m-4" type="checkbox"  value={form.cardio} onChange={handleChange} />
                             <span>NÃO</span>
 
                             <input className="m-4" type="checkbox"  />
@@ -193,7 +193,7 @@ export default function Historico() {
                             <input className="m-4" type="checkbox" value={form.implante} onChange={handleChange}  />
                             <span>SIM</span>
                             <label className="prontuario">Se sim, quais? </label>
-                            <input className="prontuario-resposta" type="number" required /> 
+                            <input className="prontuario-resposta" type="number"  /> 
                         </div>
 
                         <div> 

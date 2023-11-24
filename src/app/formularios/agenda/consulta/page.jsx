@@ -14,15 +14,16 @@ export default function Consulta() {
 
     const [dia, setDia] = useState('');
     const [horario, setHorario] = useState('');
-    const [laboratorio, setLaboratorio] = useState('');
+    const [especialidade, setEspecialidade] = useState('');
+    const [local, setLocal] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const resposta = await fetch("http://localhost:8080/", {
+        const resposta = await fetch("http://localhost:8080/mm/consultas", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dia, horario, laboratorio),
+            body: JSON.stringify(dia, horario, especialidade, local),
         });
         if (resposta.ok) {
             console.log("Agendamento realizado com sucesso :D");
@@ -69,9 +70,13 @@ export default function Consulta() {
                         </div>
 
                         <div>
-                            <label className="formulario">Em qual laboratório você gostaria de passar?</label>
-                            <input className="formulario-resposta" type="text" required value={laboratorio} onChange={(e) => setLaboratorio(e.target.value)} />
+                            <label className="formulario">Em qual especialista irá passar?</label>
+                            <input className="formulario-resposta" type="text" required value={especialidade} onChange={(e) => setEspecialidade(e.target.value)} />
                         </div>
+
+                        <div>
+                            <label className="formulario">Em qual local você gostaria de passar?</label>
+                            <input className="formulario-resposta" type="text" required value={local} onChange={(e) => setLocal(e.target.value)} />                        </div>
 
                         <div>
                             <button className='cursor-pointer bg-pink-200 text-black py-3 px-6 rounded-md mt-6 mb-2 hover:bg-pink-400 transition duration-500 ease-out' type="submit"> Marque sua consulta </button>

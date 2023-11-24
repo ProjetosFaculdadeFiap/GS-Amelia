@@ -3,12 +3,12 @@ import Link from "next/link";
 import { useState } from "react"
 
 export default function Cadastro() {
-    const [form, setForm] = useState({
-        nome: "",
-        email: "",
-        cpf: "",
-        senha: "",
-        });
+    const [nome, setNome] = useState(''); 
+    const [email, setEmail] = useState(''); 
+    const [cpf, setCpf] = useState(''); 
+    const [senha, setSenha] = useState('');
+
+    const [data, setData] = useState('')
         
         const handleChange = (e) => {
             const { name, value } = e.target;
@@ -18,17 +18,26 @@ export default function Cadastro() {
         const handleCadastro = async (e) => {
             e.preventDefault();
             try {
-                const resposta = await fetch("http://localhost:8080/mm/paciente", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(form),
-                });
 
-                if (!resposta.ok) {
-                    throw new Error(`Erro ao cadastrar usuário: ${resposta.status} ${resposta.statusText}`);
-                }
+                console.log(data)
+                // const paciente{
+                    
+                //     "data_nascimento": ,
+                //     "cpf": cpf,
+                //     "nome": nome
+                    
+                // }
+                // const resposta = await fetch("http://localhost:8080/mm/paciente", {
+                //     method: "POST",
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //     }, 
+                //     body: JSON.stringify(form),
+                // });
+
+                // if (!resposta.ok) {
+                //     throw new Error(`Erro ao cadastrar usuário: ${resposta.status} ${resposta.statusText}`);
+                // }
 
                 const dados = await resposta.json();
                 sessionStorage.setItem("token", dados.token);
@@ -48,30 +57,36 @@ export default function Cadastro() {
 
                         <div> 
                             <label className="mb-2" htmlFor="idNome"> Digite seu nome completo: </label>
-                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="nome" required value={form.nome} onChange={handleChange}/>       
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="nome" required onChange={(e) => setNome(e.target)}/>       
+                            
+                        </div>
+
+                        <div> 
+                            <label className="mb-2" htmlFor="idNome"> Digite sua data de nascimento: </label>
+                            <input className="p-3 my-4 border rounded-md w-full" type="date" name="nome" required onChange={(e) => setData(e.target)}/>       
                             
                         </div>
 
                         <div className="mb-4"> 
                         <div> 
                             <label className="mb-2" htmlFor="idEmail"> Digite seu E-mail: </label>
-                            <input className="p-3 my-4 border rounded-md w-full" type="email" name="email" id="idEmail" placeholder="Email:" required onChange={handleChange} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="email" name="email" id="idEmail" placeholder="Email:" required onChange={(e) => setEmail(e.target)} />
                         
                         </div>
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idCpf"> Informe seu CPF: </label>
-                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="cpf" id="idCpf" placeholder="CPF:" required onChange={handleChange} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" name="cpf" id="idCpf" placeholder="CPF:" required onChange={(e) => setCpf(e.target)} />
                         </div>
 
                         <div> 
                             <label className="mb-2" htmlFor="idSenha"> Crie uma Senha: </label>
-                            <input className="p-3 my-4 border rounded-md w-full" type="password" name="senha" id="idSenha" placeholder="Senha:" required onChange={handleChange} />
+                            <input className="p-3 my-4 border rounded-md w-full" type="password" name="senha" id="idSenha" placeholder="Senha:" required onChange={(e) => setSenha(e.target)} />
                         </div>
 
                         <div className="flex flex-col items-center"> 
-                            <button className="registro-card-resposta">
+                            <button className="registro-card-resposta" onSubmit={handleCadastro}>
                                 Registrar 
                             </button>
                             <div className="login">

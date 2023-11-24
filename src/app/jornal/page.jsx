@@ -74,7 +74,35 @@ export default function Jornal() {
                         Então brincamos com isso fazendo a sigla M&M. 
                     </p>
 
-                <h1 className="introducao font-bold"> Participantes </h1>
+                <h1 className="introducao font-bold"> Integrantes M&M: </h1>
+                    <div className='flex justify-around'> 
+                        <a href='https://github.com/aaaaaaaaana'> 
+                            <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Ana Luiza Fontes <br /> RM551401 | 1TDSPL </button>
+                        </a>
+
+                        <a href='https://github.com/BeatrizSanti'> 
+                            <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Beatriz Fon Ehnert de Santi <br /> RM551856 | 1TDSPL </button>
+                        </a>
+                    
+                        <a href='https://github.com/NeugeMa'> 
+                            <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Mariana Neugebauer Dourado <br /> RM550494 | 1TDSPL </button>
+                        </a>
+
+                        <a href='https://github.com/MatheusFelipeCamarinhaDuarte'> 
+                            <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Matheus Felipe Camarinha Duarte<br /> RM552295 | 1TDSPL </button>
+                        </a>
+
+                        <a href='https://github.com/M1relly'> 
+                            <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Mirelly Ribeiro Azevedo <br /> RM98672 | 1TDSPL </button>
+                        </a>
+                    </div> 
+                    <div className="flex justify-around"> 
+                        <p className="text-base"> <strong> Domain Driven Design </strong> </p>
+                        <p className="text-base"> <strong> Software Design & TX </strong> </p> 
+                        <p className="text-base"> <strong> Responsive Web Development </strong> </p> 
+                        <p className="text-base"> <strong> Building Relational Database<br />Computational Thinking Using Python</strong> </p>
+                        <p className="text-base"> <strong> AI & Chatbot </strong> </p>
+                    </div>
 
                 <h1 className="introducao font-bold"> Feedback </h1>
             </div> 

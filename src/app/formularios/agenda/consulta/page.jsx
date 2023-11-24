@@ -2,6 +2,16 @@
 import React, { useState } from 'react';
 
 export default function Consulta() {
+
+  // Utilização de Token para travar rotas
+  // useEffect(() => {
+    // const token = sessionStorage.getItem("token");
+    // if (!token) {
+      // window.location.href = "/usuarios/login";
+   // }
+  // }, []);
+
+
     const [dia, setDia] = useState('');
     const [horario, setHorario] = useState('');
     const [laboratorio, setLaboratorio] = useState('');

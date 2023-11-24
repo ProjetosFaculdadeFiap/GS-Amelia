@@ -1,4 +1,13 @@
 export default function Historico() {
+
+  // Utilização de Token para travar rotas
+  // useEffect(() => {
+    // const token = sessionStorage.getItem("token");
+    // if (!token) {
+      // window.location.href = "/usuarios/login";
+   // }
+  // }, []);
+
     // JAVASCRIPT - HISTÓRICO
 
     return (

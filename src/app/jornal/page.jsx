@@ -61,12 +61,12 @@ export default function Jornal() {
                             <p className="introducao-informacao font-bold"> Algumas curiosidades: </p>
                             <p className="introducao-informacao"> Nossa robô amelía tem uma sigla por trâs de tudo, sendo ela: </p>
                                 <div className="px-10 mb-4"> 
-                                    <li> A ssistência </li> 
-                                    <li> M édica </li> 
-                                    <li> E special</li> 
-                                    <li> L ligada à </li> 
-                                    <li> I  nteligência</li> 
-                                    <li> A  rtificial</li> 
+                                    <li> <a class="text-red-300">  A </a> ssistência </li> 
+                                    <li> <a class="text-red-300">  M </a> édica </li> 
+                                    <li> <a class="text-red-300">  E </a> special</li> 
+                                    <li> <a class="text-red-300">  L </a> ligada à </li> 
+                                    <li> <a class="text-red-300">  I </a> nteligência</li> 
+                                    <li> <a class="text-red-300">  A </a> rtificial</li> 
                                 </div> 
 
                         

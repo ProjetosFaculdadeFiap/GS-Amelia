@@ -24,3 +24,4 @@ export default function SobreHapvida() {
             </div>
             div> 
                 <h2 className="text-2xl px-10"> Conheça nossos valores e objetivos: </h2>
+                    <div className="card-filho">

@@ -43,8 +43,27 @@ export default function Feedback() {
         <> 
             <section className="flex justify-center items-center h-screen">
             <div className="mx-auto p-10 bg-red-200 rounded-lg shadow-md">
+            <form onSubmit={handleSubmit} className="registro-card"> 
+                    <fieldset className="m-0 p-0 border-none"> 
+                    <legend className="text-lg font-bold mb-4">Bem vindo ao Feedback</legend> 
 
-               
+                        <div> 
+                            <label className="mb-2" htmlFor="idNome"> Digite seu nome: </label>
+                            <input className="p-3 my-4 border rounded-md w-full" type="text"  value={nome} onChange={(e) => setNome(e.target.value)} /> 
+                            
+                        </div>
+
+                        <div className="mb-4"> 
+                        <div> 
+                            <label className="mb-2" htmlFor="idDescricao"> O que você achou do projeto? </label>
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                        
+                        </div>
+                        </div>
+
+
+                    </fieldset>
+                </form>
             </div>
             </section>
         </>

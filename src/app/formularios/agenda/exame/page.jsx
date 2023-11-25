@@ -1,4 +1,4 @@
-/* "use client"; 
+"use client"; 
 import { useEffect, useState } from "react";
 
 export default function Exame() {
@@ -86,4 +86,4 @@ export default function Exame() {
             </div>
         </>
     )
-} */ 
+}

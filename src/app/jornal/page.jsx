@@ -42,7 +42,10 @@ export default function Jornal() {
                                         <li className="px-10 mb-6"> <strong> Software Design & TX </strong> - Diagramas explicando nossa atuação no site, nosso robô gerando prontuários </li>
                                 </div>
                                         
-                           
+                            <p className="introducao-informacao"> Diferentes versões da nossa querida amelía :) </p>
+                            <p className="introducao-informacao"> Para nos o R2D2 de StarWars e Wall-E da Pixar foram grandes inspirações para chegarmos na Amelía. </p> 
+                            <p className="introducao-informacao"> Criamos três prototipos dela, sendo dois o visual dela de frente e de costas e o terceiro como ela carregaria. </p> 
+                            
 
             </div> 
         </div> 

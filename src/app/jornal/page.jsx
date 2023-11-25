@@ -24,8 +24,17 @@ export default function Jornal() {
                     Então ela seria de grande ajuda para estas escolas. E por fim o objetivo final que foi desenvolvido a base de uma verdade vivida por uma das integrantes do grupo. Que é sobre o abandono de idosos... Muitas pessoas ao envelhecerem são abandonadas pelos proprios filhos ou parentes 
                     que acabam deixando em asilos ou até esquecem eles. E a nossa querida amelía além de estar junto dando apoio emocional estará lá para ajudar na monitoria deles, em caso de queda, machucados, remédios ela estará lá pra ajudar.</p>
 
-                        
+                        <div className="px-6"> 
+                            <Image src="/img/amelia.png"
+                            alt="amelia imagem"
+                            width={250}
+                            height={0} />
+
+                            
+
             </div> 
+        </div> 
+
         </>
     )
 } 

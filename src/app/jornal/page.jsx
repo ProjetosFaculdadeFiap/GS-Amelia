@@ -73,7 +73,17 @@ export default function Jornal() {
                                 </div> 
 
                         
-                    
+                    <p className="introducao-informacao mb-4"> Por que nossa empresa se chama M&M? Bom isso é uma boa pergunta, já que ela é um trocadilho sobre nosso grupo aonde somos compostos por quatro meninas e um menino. 
+                        Então brincamos com isso fazendo a sigla M&M. 
+                    </p>
+
+                    <p className="whitespace-nowrap  px-10 transition-colors duration-300 hover:text-red-300 font-bold"> Feedback :) </p>
+                    <p className="introducao-informacao mb-10"> Gostaria de fazer um feedback sobre o nosso site? Nos contando sobre sua expêriencia?                   
+                        <a className="whitespace-nowrap  px-10 transition-colors duration-300 hover:text-red-300 font-bold" href="/jornal/feedback"> Quero fazer um feedback :) </a>
+                    </p>
+
+
+                
 
             </div> 
         </div> 

@@ -68,7 +68,12 @@ export default function Feedback() {
                             <label className="mb-2" htmlFor="idIndicacao"> Por onde você nos encontrou? </label>
                             <input className="p-3 my-4 border rounded-md w-full" type="text" value={indicacao} onChange={(e) => setIndicacao(e.target.value)} />
                         </div>
-
+                        
+                        <div className="flex flex-col items-center"> 
+                            <button className="registro-card-resposta">
+                                Enviar :D 
+                            </button>
+                        </div>
 
                     </fieldset>
                 </form>

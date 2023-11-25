@@ -60,6 +60,7 @@ export default function Exame() {
                             </div>
 
                             <div>
+                                
                                 <label className="formulario">Em qual horário você gostaria de marcar seu exame?</label>
                                 <input className="m-4" type="checkbox"  value={horario} onChange={(e) => setHorario(e.target.value)} />
                                 <span>MANHÃ</span>
@@ -73,7 +74,7 @@ export default function Exame() {
 
                                 <label className="formulario">Qual exame irá realizar?</label>
                                 <input className="formulario-resposta" type="text" required value={exame} onChange={(e) => setExame(e.target.value)} />
-                                
+
                             </div>
 
                             <div>

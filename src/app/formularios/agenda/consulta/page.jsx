@@ -1,38 +1,4 @@
 
-"use client";
-import React, { useEffect, useState } from 'react';
-
-export default function Consulta() {
-
-  // Utilização de Token para travar rotas
-  // useEffect(() => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-      // window.location.href = "/usuarios/login";
-   // }
-  // }, []);
-
-
-    const [dia, setDia] = useState('');
-    const [horario, setHorario] = useState('');
-    const [especialidade, setEspecialidade] = useState('');
-    const [local, setLocal] = useState('');
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const resposta = await fetch("http://localhost:8080/mm/consultas", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dia, horario, especialidade, local),
-        });
-        if (resposta.ok) {
-            console.log("Agendamento realizado com sucesso :D");
-        } else {
-            console.error('Seu agendamento teve alguma falha, vamos verificar e tente novamente outra hora:', resposta.status, resposta.statusText);
-        }
-    }
-
     return (
         <>
             <div> 

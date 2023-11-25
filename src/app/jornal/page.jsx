@@ -30,7 +30,19 @@ export default function Jornal() {
                             width={250}
                             height={0} />
 
-                            
+                            <p className="px-4">Venha conhecer sobre a empresa!!</p>
+                            <p className="px-4"> Para a produção da Amelía nós separamos o que deveriamos fazer em cada matéria. Para que tudo se concilie e ocorra tudo bem!</p>
+                                <h5 className="px-10 mb-4"> Aqui abaixo está uma ideia de como ouve a organização: </h5>
+                                <div className="flex justify-start"> 
+                                        <li className="px-10 mb-2"> <strong> AI & Chatbot </strong> </li>
+                                        <li className="px-10 mb-2"> <strong> Building Relational Database </strong> - Base de dados com informações dos usuários dos robôs </li>
+                                        <li className="px-10 mb-2"> <strong> Computational Thinking Using Python </strong> - Consulta às informações do usuário no banco </li>
+                                        <li className="px-10 mb-2"> <strong> Domain Driven Design </strong> - CRUD no banco de dados pra retornar ao front end com informações do prontuário </li>
+                                        <li className="px-10 mb-2"> <strong> Responsive Web Development </strong> - Prontuário virtual com requisições ao banco </li>
+                                        <li className="px-10 mb-6"> <strong> Software Design & TX </strong> - Diagramas explicando nossa atuação no site, nosso robô gerando prontuários </li>
+                                </div>
+                                        
+                           
 
             </div> 
         </div> 

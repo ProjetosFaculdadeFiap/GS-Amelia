@@ -57,9 +57,13 @@ export default function Feedback() {
                         <div> 
                             <label className="mb-2" htmlFor="idDescricao"> O que você achou do projeto? </label>
                             <input className="p-3 my-4 border rounded-md w-full" type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-                        
                         </div>
                         </div>
+                        <div> 
+                            <label className="mb-2" htmlFor="idProposta"> Se pudesse mudar algo ou acresentar o que faria? </label>
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" value={proposta} onChange={(e) => setProposta(e.target.value)} />
+                        </div>
+
 
 
                     </fieldset>

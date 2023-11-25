@@ -41,7 +41,12 @@ export default function Feedback() {
 
     return (
         <> 
+            <section className="flex justify-center items-center h-screen">
+            <div className="mx-auto p-10 bg-red-200 rounded-lg shadow-md">
 
+               
+            </div>
+            </section>
         </>
     )
 } 

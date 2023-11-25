@@ -105,7 +105,13 @@ export default function Jornal() {
                             <button className='bg-pink-300 px-3 m-4 p-2 rounded-md cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 '> Mirelly Ribeiro Azevedo <br /> RM98672 | 1TDSPL </button>
                         </a>
                     </div> 
-                    
+                    <div className="flex justify-around"> 
+                        <p className="text-base"> <strong> Domain Driven Design </strong> </p>
+                        <p className="text-base"> <strong> Software Design & TX </strong> </p> 
+                        <p className="text-base"> <strong> Responsive Web Development </strong> </p> 
+                        <p className="text-base"> <strong> Building Relational Database<br />Computational Thinking Using Python</strong> </p>
+                        <p className="text-base"> <strong> AI & Chatbot </strong> </p>
+                    </div>
 
             </div> 
         </div> 

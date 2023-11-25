@@ -25,3 +25,6 @@ export default function SobreHapvida() {
             div> 
                 <h2 className="text-2xl px-10"> Conheça nossos valores e objetivos: </h2>
                     <div className="card-filho">
+                    <p className="textinho"> <a class="text-red-400"> Nossa Missão: </a> Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros.</p>
+                        <p className="textinho"> <a class="text-red-400"> Nossa Visão: </a> Ser reconhecida pela qualidade assistencial e geração de valor para todo o ecossistema da saúde.</p>
+                        <p className="textinho"> <a class="text-red-400"> Nossos Valores: </a> Nossos valores se tornam maiores e mais alcansáveis para </p>

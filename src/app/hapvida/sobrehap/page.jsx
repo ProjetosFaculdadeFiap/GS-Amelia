@@ -32,3 +32,7 @@ export default function SobreHapvida() {
                                 <li className="item">Comprometimento</li>
                                 <li className="item">Ética e combate à corrupção</li>
                                 <li className="item">Inovação e aprendizado</li>
+                                <li className="item">Respeito</li>
+                                <li className="item">Responsabilidade social</li>
+                                <li className="item">Sustentabilidade</li>
+                                <li className="item">Eficiência em custo</li>

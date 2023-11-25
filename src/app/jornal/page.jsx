@@ -45,8 +45,23 @@ export default function Jornal() {
                             <p className="introducao-informacao"> Diferentes versões da nossa querida amelía :) </p>
                             <p className="introducao-informacao"> Para nos o R2D2 de StarWars e Wall-E da Pixar foram grandes inspirações para chegarmos na Amelía. </p> 
                             <p className="introducao-informacao"> Criamos três prototipos dela, sendo dois o visual dela de frente e de costas e o terceiro como ela carregaria. </p> 
-                            
+                            <div className="flex justify-start"> 
+                                <Image src="/img/robo-frente.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
 
+                                <Image src="/img/robo-costas.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
+
+                                <Image src="/img/robo.png" 
+                                    alt="robo amelia"
+                                    width={200}
+                                    height={0} />  
+                            </div>
+                            
             </div> 
         </div> 
 

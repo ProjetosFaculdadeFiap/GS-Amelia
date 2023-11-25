@@ -64,6 +64,10 @@ export default function Feedback() {
                             <input className="p-3 my-4 border rounded-md w-full" type="text" value={proposta} onChange={(e) => setProposta(e.target.value)} />
                         </div>
 
+                        <div> 
+                            <label className="mb-2" htmlFor="idIndicacao"> Por onde você nos encontrou? </label>
+                            <input className="p-3 my-4 border rounded-md w-full" type="text" value={indicacao} onChange={(e) => setIndicacao(e.target.value)} />
+                        </div>
 
 
                     </fieldset>

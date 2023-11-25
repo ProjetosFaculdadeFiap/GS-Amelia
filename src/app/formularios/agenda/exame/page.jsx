@@ -11,6 +11,7 @@ export default function Exame() {
     }
     }, []);
 
+    
     const [dia, setDia] = useState('');
     const [horario, setHorario] = useState('');
     const [exame, setExame] = useState(''); 
@@ -30,7 +31,6 @@ export default function Exame() {
             console.error('Seu agendamento teve alguma falha, vamos verificar e tente novamente outra hora:', resposta.status, resposta.statusText);
         }
     }
-
 
 
     return (
@@ -60,6 +60,7 @@ export default function Exame() {
                             </div>
 
                             <div>
+                                
                                 <label className="formulario">Em qual horário você gostaria de marcar seu exame?</label>
                                 <input className="m-4" type="checkbox"  value={horario} onChange={(e) => setHorario(e.target.value)} />
                                 <span>MANHÃ</span>
@@ -70,13 +71,17 @@ export default function Exame() {
                         </div>
 
                             <div>
+
                                 <label className="formulario">Qual exame irá realizar?</label>
                                 <input className="formulario-resposta" type="text" required value={exame} onChange={(e) => setExame(e.target.value)} />
+
                             </div>
 
                             <div>
+
                                 <label className="formulario">Em qual laboratório você gostaria de passar?</label>
                                 <input className="formulario-resposta" type="text" required value={laboratorio} onChange={(e) => setLaboratorio(e.target.value)} />
+
                             </div>
                             <div> 
                                 <input className='cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 ... rounded-md m-2 bg-pink-200 px-3 ' type="submit" value="Marque seu exame"/>
@@ -86,4 +91,5 @@ export default function Exame() {
             </div>
         </>
     )
-} 
+}
+

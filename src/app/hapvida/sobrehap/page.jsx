@@ -22,7 +22,7 @@ export default function SobreHapvida() {
                 <p className="introducao-informacao mb-10"> Conta com rede assistencial própria composta por 85 hospitais, 77 prontos atendimentos e 331 clínicas médicas. Também dispõe aos seus 
                 beneficiários 271 centros de diagnóstico por imagem e coleta laboratorial, dos quais cerca de 100 operações fazem parte do Laboratório NotreLabs, uma rede nacional com capacidade de processar 4,5 milhões de análises clínicas e 500 mil exames de imagens por mês. </p> 
             </div>
-            div> 
+            <div> 
                 <h2 className="text-2xl px-10"> Conheça nossos valores e objetivos: </h2>
                     <div className="card-filho">
                     <p className="textinho"> <a class="text-red-400"> Nossa Missão: </a> Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros.</p>
@@ -36,3 +36,9 @@ export default function SobreHapvida() {
                                 <li className="item">Responsabilidade social</li>
                                 <li className="item">Sustentabilidade</li>
                                 <li className="item">Eficiência em custo</li>
+
+                </div>
+            </div>
+        </> 
+    )   
+} 

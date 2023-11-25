@@ -1,15 +1,16 @@
+/* 
 "use client"; 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Historico() {
 
   // Utilização de Token para travar rotas
-  // useEffect(() => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-      // window.location.href = "/usuarios/login";
-   // }
-  // }, []);
+    useEffect(() => {
+        const token = sessionStorage.getItem("token");
+        if (!token) {
+        window.location.href = "/usuarios/login";
+    }
+    }, []);
 
     // JAVASCRIPT - HISTÓRICO
     const [form, setForm] = useState({
@@ -203,4 +204,4 @@ export default function Historico() {
                 </div>
         </>
     )
-}
+} */ 

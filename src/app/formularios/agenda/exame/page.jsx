@@ -1,15 +1,15 @@
-"use client"; 
-import { useState } from "react";
+/* "use client"; 
+import { useEffect, useState } from "react";
 
 export default function Exame() {
 
   // Utilização de Token para travar rotas
-  // useEffect(() => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-      // window.location.href = "/usuarios/login";
-   // }
-  // }, []);
+    useEffect(() => {
+        const token = sessionStorage.getItem("token");
+        if (!token) {
+        window.location.href = "/usuarios/login";
+    }
+    }, []);
 
     const [dia, setDia] = useState('');
     const [horario, setHorario] = useState('');
@@ -86,4 +86,4 @@ export default function Exame() {
             </div>
         </>
     )
-}
+} */ 

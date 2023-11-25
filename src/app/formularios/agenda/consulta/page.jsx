@@ -1,5 +1,6 @@
+/* 
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Consulta() {
 
@@ -31,8 +32,6 @@ export default function Consulta() {
             console.error('Seu agendamento teve alguma falha, vamos verificar e tente novamente outra hora:', resposta.status, resposta.statusText);
         }
     }
-
-    
 
     return (
         <>
@@ -86,6 +85,4 @@ export default function Consulta() {
             </div>
         </>
     );
-}
-
-    
+} */ 

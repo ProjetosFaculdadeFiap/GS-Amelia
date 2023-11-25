@@ -1,15 +1,16 @@
+/* 
 "use client"; 
 import { useState } from "react";
 
 export default function Prontuario() {
 
   // Utilização de Token para travar rotas
-  // useEffect(() => {
-    // const token = sessionStorage.getItem("token");
-    // if (!token) {
-      // window.location.href = "/usuarios/login";
-   // }
-  // }, []);
+    useEffect(() => {
+        const token = sessionStorage.getItem("token");
+        if (!token) {
+        window.location.href = "/usuarios/login";
+    }
+    }, []);
 
     // JAVASCRIPT - PRONTUÁRIO 
     const [form, setForm] = useState({
@@ -19,7 +20,8 @@ export default function Prontuario() {
         etnia:"", 
         genero:"", 
         email:"", 
-        convenio:"", 
+        convenio:"",
+        telefone:"",
         endereco:"",
         cep:"", 
     }); 
@@ -37,7 +39,7 @@ export default function Prontuario() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const resposta = await fetch("http://localhost:8080/", {
+        const resposta = await fetch("http://localhost:8080/mm/prontuario", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form),
@@ -91,7 +93,7 @@ export default function Prontuario() {
                         <input className="prontuario-estilo" type="text" name="cpf" value={form.cpf} onChange={handleChange} required />
 
                         <label className="prontuario"> Digite sua Etina:</label>
-                        <input className="prontuario-estilo" type="text" required />
+                        <input className="prontuario-estilo" type="text" name="etnia" value={form.etnia} onChange={handleChange} required />
                     </div>
 
                     <div>
@@ -132,4 +134,4 @@ export default function Prontuario() {
                 </div>
         </>
     )
-}
+} */ 

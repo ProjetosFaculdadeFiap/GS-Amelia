@@ -3,14 +3,13 @@ import { useEffect } from "react";
 
 export default function SobreHapvida() {
 
-    // Utilização de Token para travar rotas
-    useEffect(() => {
-        const token = sessionStorage.getItem("token");
-        if (!token) {
-        window.location.href = "/usuarios/login";
-    }
-    }, []);
-
+  // Utilização de Token para travar rotas
+        useEffect(() => {
+            const token = sessionStorage.getItem("token");
+            if (!token) {
+            window.location.href = "/usuarios/login";
+        }
+        }, []);
 
     return (
         <> 
@@ -24,11 +23,11 @@ export default function SobreHapvida() {
             </div>
             <div> 
                 <h2 className="text-2xl px-10"> Conheça nossos valores e objetivos: </h2>
-                    <div className="card-filho">
-                    <p className="textinho"> <a class="text-red-400"> Nossa Missão: </a> Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros.</p>
+                    <div className="card-filho"> 
+                        <p className="textinho"> <a class="text-red-400"> Nossa Missão: </a> Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros.</p>
                         <p className="textinho"> <a class="text-red-400"> Nossa Visão: </a> Ser reconhecida pela qualidade assistencial e geração de valor para todo o ecossistema da saúde.</p>
                         <p className="textinho"> <a class="text-red-400"> Nossos Valores: </a> Nossos valores se tornam maiores e mais alcansáveis para </p>
-                        <li className="item">Acolhimento</li>
+                                <li className="item">Acolhimento</li>
                                 <li className="item">Comprometimento</li>
                                 <li className="item">Ética e combate à corrupção</li>
                                 <li className="item">Inovação e aprendizado</li>
@@ -36,7 +35,6 @@ export default function SobreHapvida() {
                                 <li className="item">Responsabilidade social</li>
                                 <li className="item">Sustentabilidade</li>
                                 <li className="item">Eficiência em custo</li>
-
                 </div>
             </div>
         </> 
